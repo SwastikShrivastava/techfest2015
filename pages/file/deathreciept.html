@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+<title>Birth/Death Ceritificate Generation.</title>
+<style>
+	#main{
+		height:100%;
+		width:60%;
+		position:absolute;
+		left:20%;
+	}
+</style>
+
+</head>
+<body>
+<div id="main">
+<img src="../img/a.png" height="120px" width="auto"></img>
+<div id="head" style="position:absolute; top:1%; left:13%;" align="center">
+<h1 id="st"></h1>
+<h3>(E-Generated Reciept For Birth/Death Ceritificate)</h3>
+</div>
+<div>
+<p id="cn"></p>
+<p id="bd"></p>
+<p id="mn"></p>
+<p id="mai"></p>
+<p id="fn"></p>
+<p id="d"></p>
+<p id="r"></p>
+
+</div>
+
+<div id="foot" >
+	<p id="rn"></p>
+	<p id="rt"></p>
+</div>
+<div align="center">
+<br><br>
+<button onclick="print1()"><b>Print Reciept</button>
+</div>
+<script>
+	document.getElementById("st").innerHTML = "Municipal Corporation of " + localStorage.getItem("deathstate");
+	document.getElementById("cn").innerHTML = "Person's Name :  " + localStorage.getItem("pn");
+	document.getElementById("bd").innerHTML = "Death Day :  " + localStorage.getItem("dd");
+	document.getElementById("mn").innerHTML = "Reporter's Name :  " + localStorage.getItem("ppn");
+	document.getElementById("mai").innerHTML = "Reporter's Contact Number :  " + localStorage.getItem("pcn");
+	document.getElementById("d").innerHTML = "District :  " + localStorage.getItem("dis");
+	document.getElementById("r").innerHTML = "Religion :  " + localStorage.getItem("rel");
+	var dat= new Date();
+	document.getElementById("rt").innerHTML = "<b>Regitration Date & Time :  " + dat;
+	document.getElementById("rn").innerHTML = "<b>Reciept Number :  " + localStorage.getItem("rep1");
+	
+	function print1(){
+		
+		window.print();
+	}
+</script>
+</body>
+</html>

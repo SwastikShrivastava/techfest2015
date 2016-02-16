@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<head>
+<title>Birth/Death Ceritificate Generation.</title>
+
+<script src="js/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/sweetalert.css" />
+<link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/set2.css" />
+<script src="js/TweenMax.min.js"></script>
+<script src="js/newbirth.js"></script>
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/newbirth.css">
+</head>
+<body>	
+	<div id="marq" align="center">
+<marquee onmouseover="this.stop();" onmouseout="this.start();">This is going to get marqueees............</marquee>
+</div>
+
+	<a href="../index.html"><div class="back b1 animated fadeIn">
+			<span class="fa-stack fa-lg pull-left">
+			<i class="fa fa-circle fa-stack-2x fa-cus"></i>
+			<i class="fa fa-home fa-stack-1x fa-cusp"></i>
+			</span>
+			<p style="color:white;">HOME</p>
+	</div></a>
+	
+	<div class="next b1 animated infinite pulse" onclick="next()">
+			<span class="fa-stack fa-lg pull-left">
+			<i class="fa fa-circle fa-stack-2x fa-cus"></i>
+			<i class="fa fa-chevron-right fa-stack-1x fa-cusp" id="nex1"></i>
+			</span>
+			<p style="color:white;" id="nex">NEXT</p>
+	</div>
+	<div class="prev b1 animated infinite pulse" id="prev" onclick="prev()">
+			<span class="fa-stack fa-lg pull-left">
+			<i class="fa fa-circle fa-stack-2x fa-cus"></i>
+			<i class="fa fa-chevron-left fa-stack-1x fa-cusp"></i>
+			</span>
+			<p style="color:white;">PREVIOUS</p>
+	</div>
+		<div id="loadimg" class="animated infinite pulse">
+			<img src="../img/a.png" height=100% id="img"></img>
+		</div>
+	<div id="footer">
+		<div id="em">
+			<img src="../img/b.png" height=100%></img>
+		</div>
+	</div>
+	<div id="special">
+	<span class="fa-stack fa-lg">
+		<i class="fa fa-circle fa-stack-2x fa-cusp"></i>
+		<i class="fa fa-wechat fa-stack-1x fa-cus"></i>
+	</span>
+	<span class="fa-stack fa-lg">
+		<i class="fa fa-circle fa-stack-2x fa-cusp"></i>
+		<i class="fa fa-leaf fa-stack-1x fa-cus"></i>
+	</span>
+	<span class="fa-stack fa-lg">
+		<i class="fa fa-circle fa-stack-2x fa-cusp"></i>
+		<i class="fa fa-tree fa-stack-1x fa-cus"></i>
+	</span>
+	<span class="fa-stack fa-lg">
+		<i class="fa fa-circle fa-stack-2x fa-cusp"></i>
+		<i class="fa fa-child fa-stack-1x fa-cus"></i>
+	</span>
+	</div>
+	<div id="form1">
+	<h2 style="margin-bottom: 0px;">LEGAL INFORMATION</h2>
+				<span class="input input--nao">
+					<input class="input__field input__field--nao" type="date" id="input-1"/>
+					<label class="input__label input__label--nao" for="input-1">
+						<span class="input__label-content input__label-content--nao"></span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>				
+				<span class="input input--nao">
+					<input class="input__field input__field--nao" type="text" id="input-2" />
+					<label class="input__label input__label--nao" for="input-2">
+						<span class="input__label-content input__label-content--nao">Child Name</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+				<span class="input input--nao">
+					<input class="input__field input__field--nao" type="text" id="input-3" />
+					<label class="input__label input__label--nao" for="input-3">
+						<span class="input__label-content input__label-content--nao">Time of Birth</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+				<span class="input input--nao">
+					<input class="input__field input__field--nao" type="text" id="input-4" />
+					<label class="input__label input__label--nao" for="input-3">
+						<span class="input__label-content input__label-content--nao">Place of birth</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+				<span class="input input--nao">
+					<input class="input__field input__field--nao" type="text" id="input-5" />
+					<label class="input__label input__label--nao" for="input-3">
+						<span class="input__label-content input__label-content--nao">Zone</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+				<input type="radio" name="gender" value="male" checked> Male
+				<input type="radio" name="gender" value="female"> Female
+		<br><br>
+		<h2 style="margin-bottom: 0px;">PARENT'S DETAILS</h2>
+				<span class="input input--nao">
+					<input class="input__field input__field--nao" type="text" id="input-6" />
+					<label class="input__label input__label--nao" for="input-1">
+						<span class="input__label-content input__label-content--nao">Father's Name</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>				
+				<span class="input input--nao">
+					<input class="input__field input__field--nao" type="text" id="input-7" />
+					<label class="input__label input__label--nao" for="input-2">
+						<span class="input__label-content input__label-content--nao">Mother's Name</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+				<span class="input input--nao">
+					<input class="input__field input__field--nao" type="text" id="input-8" />
+					<label class="input__label input__label--nao" for="input-3">
+						<span class="input__label-content input__label-content--nao">Permannet Address</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+	</div>
+	
+	<div id="form2">
+	<h2 style="margin-bottom: 0px;">STATISTICAL INFORMATION</h2>
+				<span class="input input--nao">
+					<input class="input__field input__field--nao" type="text" id="input-9" />
+					<label class="input__label input__label--nao" for="input-1">
+						<span class="input__label-content input__label-content--nao">District</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>				
+				<span class="input input--nao">
+					<input class="input__field input__field--nao" type="text" id="input-10" />
+					<label class="input__label input__label--nao" for="input-2">
+						<span class="input__label-content input__label-content--nao">Country</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+				<span class="input input--nao">
+					<input class="input__field input__field--nao" type="text" id="input-11" />
+					<label class="input__label input__label--nao" for="input-3">
+						<span class="input__label-content input__label-content--nao">Religion</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+				<span class="input input--nao">
+					<input class="input__field input__field--nao" type="text" id="input-12" />
+					<label class="input__label input__label--nao" for="input-3">
+						<span class="input__label-content input__label-content--nao">Father's Education</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+				<span class="input input--nao">
+					<input class="input__field input__field--nao" type="text" id="input-13" />
+					<label class="input__label input__label--nao" for="input-3">
+						<span class="input__label-content input__label-content--nao">Mother's Education</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+				<input type="radio" name="place" value="town" checked> Town
+				<input type="radio" name="place" value="village"> Village
+		<br><br>
+		<h2 style="margin-bottom: 0px;">MOTHER'S DETAILS</h2>
+				<span class="input input--nao">
+					<input class="input__field input__field--nao" type="number" id="input-14" />
+					<label class="input__label input__label--nao" for="input-1">
+						<span class="input__label-content input__label-content--nao">Number of Children</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>				
+				<span class="input input--nao">
+					<input class="input__field input__field--nao" type="text" id="input-15" />
+					<label class="input__label input__label--nao" for="input-2">
+						<span class="input__label-content input__label-content--nao">Method of Delivery</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+				<span class="input input--nao">
+					<input class="input__field input__field--nao" type="number" id="input-16" />
+					<label class="input__label input__label--nao" for="input-3">
+						<span class="input__label-content input__label-content--nao">Duration of Pregnancy</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+	</div>
+	
+	<div id="form3">
+	<h2 style="margin-bottom: 0px;">UNIQUENESS INFORMATION</h2>
+				<span class="input input--nao">
+					<input class="input__field input__field--nao" type="text" id="input-17" />
+					<label class="input__label input__label--nao" for="input-1">
+						<span class="input__label-content input__label-content--nao">Mothers's	Birthday</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>				
+				<span class="input input--nao">
+					<input class="input__field input__field--nao" type="text" id="input-18" />
+					<label class="input__label input__label--nao" for="input-2">
+						<span class="input__label-content input__label-content--nao">Mother's AADHAR ID</span>
+					</label>
+					<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+						<path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+					</svg>
+				</span>
+				<div id="state">
+				<h2>SELECT STATE : </h2>
+				<select id="input-19">
+					<option>Andhra Pradesh Gov.</option>
+					<option>Andhra Pradesh Gov.</option>
+					<option>Assam Gov.</option>
+					<option>Goa Gov.</option>
+					<option>Gujarat Gov.</option>
+					<option>Haryana Gov.</option>
+					<option>Jammu & Kashmir Gov.</option>
+					<option>Karnataka Gov.</option>
+					<option>Kerala Gov.</option>
+					<option>Madhya Pradesh Gov.</option>
+					<option>Maharashtra Gov.</option>
+					<option>Odisha Gov.</option>
+					<option>Punjab Gov.</option>
+					<option>Rajasthan Gov.</option>
+					<option>Tamil Nadu Gov.</option>
+					<option>Uttar Pradesh Gov.</option>
+					<option>Uttarakhand Gov.</option>
+					<option>West Bengal Gov.</option>
+					<option>Delhi Gov.</option>
+					<option>Nagaland Gov.</option>
+					<option>A & N Islands Gov.</option>
+				</select>
+				</div>
+	</div>
+	
+	
+		<img src="../img/c.png" id="side"></img>
+		<img src="../img/d.png" id="under"></img>
+	
+	
+	<div class="ham">
+	<i id="ham" class="fa fa-bars fa-3x" onclick="sideb()"></i>
+	</div>
+	<div class="sideOp" >
+		<div class="Op1 b1 animated fadeIn" id="op1">
+			<span class="fa-stack fa-lg pull-left">
+			<i class="fa fa-circle fa-stack-2x fa-cus"></i>
+			<i class="fa fa-cogs fa-stack-1x fa-cusp"></i>
+			</span>
+			<p style="color:white;">CHECK REPORTS</p>
+		</div>
+		
+		<div class="Op2 b1 animated fadeIn" id="op2">
+			<span class="fa-stack fa-lg pull-left">
+			<i class="fa fa-circle fa-stack-2x fa-cus"></i>
+			<i class="fa fa-bullhorn fa-stack-1x fa-cusp"></i>
+			</span>
+			<p style="color:white;">NOTIFY PEOPLE</p>
+		</div>
+		
+		<div class="Op3 b1 animated fadeIn" id="op3">
+			<span class="fa-stack fa-lg pull-left">
+			<i class="fa fa-circle fa-stack-2x fa-cus"></i>
+			<i class="fa fa-yelp fa-stack-1x fa-cusp"></i>
+			</span>
+			<p style="color:white;">CHANGE VIEW</p>
+		</div>
+		
+		<div class="Op4 b1 animated fadeIn" id="op4">
+			<span class="fa-stack fa-lg pull-left">
+			<i class="fa fa-circle fa-stack-2x fa-cus"></i>
+			<i class="fa fa-database fa-stack-1x fa-cusp"></i>
+			</span>
+			<p style="color:white;">FLOW DETAILS</p>
+		</div>
+		
+		<div class="Op5 b1 animated fadeIn" id="op5">
+			<span class="fa-stack fa-lg pull-left">
+			<i class="fa fa-circle fa-stack-2x fa-cus"></i>
+			<i class="fa fa-cloud-upload fa-stack-1x fa-cusp"></i>
+			</span>
+			<p style="color:white;">UPDATE DATA</p>
+		</div>
+		
+		
+	</div>
+	
+<script>
+	var a=0;
+	var ham = document.getElementById("ham");
+    var currentClass = ham.className;
+
+function sideb(){
+
+	if(a==0)
+	{
+		TweenMax.to(["#side",".ham"],0.3,{x:250});
+		ham.className = "fa fa-chevron-left fa-3x"; 
+		document.getElementById('op1').style.display= 'block' ;
+		document.getElementById('op2').style.display= 'block' ;
+		document.getElementById('op3').style.display= 'block' ;
+		document.getElementById('op4').style.display= 'block' ;
+		document.getElementById('op5').style.display= 'block' ;
+		a=1;
+	}
+	else
+	{
+		TweenMax.to(["#side",".ham"],0.3,{x:0});
+		ham.className = "fa fa-bars fa-3x"; 
+		document.getElementById('op1').style.display= 'none' ;
+		document.getElementById('op2').style.display= 'none' ;
+		document.getElementById('op3').style.display= 'none' ;
+		document.getElementById('op4').style.display= 'none' ;
+		document.getElementById('op5').style.display= 'none' ;
+		a=0;
+	}
+}
+
+</script>
+
+<script src="js/classie.js"></script>
+		<script>
+			(function() {
+				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+				if (!String.prototype.trim) {
+					(function() {
+						// Make sure we trim BOM and NBSP
+						var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+						String.prototype.trim = function() {
+							return this.replace(rtrim, '');
+						};
+					})();
+				}
+
+				[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+					// in case the input is already filled..
+					if( inputEl.value.trim() !== '' ) {
+						classie.add( inputEl.parentNode, 'input--filled' );
+					}
+
+					// events:
+					inputEl.addEventListener( 'focus', onInputFocus );
+					inputEl.addEventListener( 'blur', onInputBlur );
+				} );
+
+				function onInputFocus( ev ) {
+					classie.add( ev.target.parentNode, 'input--filled' );
+				}
+
+				function onInputBlur( ev ) {
+					if( ev.target.value.trim() === '' ) {
+						classie.remove( ev.target.parentNode, 'input--filled' );
+					}
+				}
+			})();
+		</script>
+</body>
+</html>

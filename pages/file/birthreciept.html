@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+<title>Birth/Death Ceritificate Generation.</title>
+<style>
+	#main{
+		height:100%;
+		width:60%;
+		position:absolute;
+		left:20%;
+	}
+</style>
+
+</head>
+<body>
+<div id="main">
+<img src="../img/a.png" height="120px" width="auto"></img>
+<div id="head" style="position:absolute; top:1%; left:13%;" align="center">
+<h1 id="st"></h1>
+<h3>(E-Generated Reciept For Birth/Death Ceritificate)</h3>
+</div>
+<div>
+<p id="cn"></p>
+<p id="bd"></p>
+<p id="mn"></p>
+<p id="mai"></p>
+<p id="fn"></p>
+<p id="d"></p>
+<p id="r"></p>
+
+</div>
+
+<div id="foot" >
+	<p id="rn"></p>
+	<p id="rt"></p>
+</div>
+<div align="center">
+<br><br>
+<button onclick="print1()"><b>Print Reciept</button>
+</div>
+<script>
+	document.getElementById("st").innerHTML = "Municipal Corporation of " + localStorage.getItem("st");
+	document.getElementById("cn").innerHTML = "Child Name :  " + localStorage.getItem("cn");
+	document.getElementById("bd").innerHTML = "BirthDay :  " + localStorage.getItem("bd");
+	document.getElementById("mn").innerHTML = "Mother's Name :  " + localStorage.getItem("mn");
+	document.getElementById("mai").innerHTML = "Mother's Adhaar ID :  " + localStorage.getItem("mai");
+	document.getElementById("fn").innerHTML = "Father's Name :  " + localStorage.getItem("fn");
+	document.getElementById("d").innerHTML = "District :  " + localStorage.getItem("d");
+	document.getElementById("r").innerHTML = "Religion :  " + localStorage.getItem("r");
+	var dat= new Date();
+	document.getElementById("rt").innerHTML = "<b>Regitration Date & Time :  " + dat;
+	document.getElementById("rn").innerHTML = "<b>Reciept Number :  " + localStorage.getItem("rep");
+	
+	function print1(){
+		
+		window.print();
+	}
+</script>
+</body>
+</html>

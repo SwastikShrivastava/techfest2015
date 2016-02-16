@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<head>
+<link rel="icon" href="img/a.png" type="image/gif" sizes="16x16">
+<meta charset="utf-8" />
+<title>Birth/Death Ceritificate Generation.</title>
+
+<link rel="stylesheet" href="css/set1.css">
+<link rel="stylesheet" type="text/css" href="./pages/css/sweetalert.css" />
+<script src="./pages/js/sweetalert.min.js"></script>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<script src="js/TweenMax.min.js"></script>
+<script src="js/main.js"></script>
+<link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+<div id="title">
+	<h1 id="mun">MUNICIPALITY</h1>
+	<h1 id="ser">SERVICES</h1>
+</div>
+
+
+<div id="marq" align="center">
+<marquee onmouseover="this.stop();" onmouseout="this.start();">The record of birth and death rates with Municipal Corporation helps a citizen in different ways. With the help of birth or death certificate, one can get numerous job opportunities or can easily make their passport and can even claim the deceased bank savings. Apart from this aspect of MC's service, development plans are meant to carve out a better and planned city. नगर निगम के साथ जन्म और मृत्यु दर का रिकार्ड अलग अलग तरीकों से एक नागरिक मदद करता है। जन्म या मृत्यु प्रमाण पत्र की मदद से, एक कई रोजगार के अवसर प्राप्त कर सकते हैं या आसानी से अपने पासपोर्ट बना सकते हैं और यहां तक ​​कि मृतक बैंक की बचत का दावा कर सकते हैं। इसके अलावा एम सी की सेवा के इस पहलू से , विकास योजनाओं के लिए एक बेहतर और सुनियोजित शहर से बाहर बनाने के लिए होती हैं ।</marquee>
+</div>
+	<div id="loader">
+		<div id="upper">
+		</div>
+		<div id="lower">
+		</div>
+		<div id="loadcircle">
+		</div>
+		<div id="loadimg">
+			<img src="./img/a.png" height=100% id="img"></img>
+		</div>
+		<div id="left" class="animated slideInLeft">
+		</div>
+		<div id="right" class="animated slideInRight">
+		</div>
+	</div>
+
+	<div id="footer">
+		<div id="em">
+			<img src="./img/b.png" height=100%></img>
+		</div>
+		<div id="color">
+			<img src="./img/j.png" height=100%></img>
+		</div>
+		<div id="color1">
+		Total Registered Birth. &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTotal Registered Death. &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLinked Municipalty. &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspApplications Submitted. &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRegistered Scheme. 
+		</div>
+		<div id="color2">
+			<i class="fa fa-child fa-3x"></i>&nbsp&nbsp&nbsp&nbsp89615&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<i class="fa fa-heartbeat fa-3x"></i>&nbsp&nbsp&nbsp&nbsp62456&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<i class="fa fa-university fa-3x"></i>&nbsp&nbsp&nbsp&nbsp83&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<i class="fa fa-file-text-o fa-3x"></i>&nbsp&nbsp&nbsp&nbsp1863245&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<i class="fa fa-list fa-3x"></i>&nbsp&nbsp&nbsp&nbsp42&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		</div>
+		
+	</div>
+	<div id="special">
+	<span class="fa-stack fa-lg">
+		<i class="fa fa-circle fa-stack-2x fa-cusp"></i>
+		<i class="fa fa-wechat fa-stack-1x fa-cus"></i>
+	</span>
+	<span class="fa-stack fa-lg">
+		<i class="fa fa-circle fa-stack-2x fa-cusp"></i>
+		<i class="fa fa-leaf fa-stack-1x fa-cus"></i>
+	</span>
+	<span class="fa-stack fa-lg">
+		<i class="fa fa-circle fa-stack-2x fa-cusp"></i>
+		<i class="fa fa-tree fa-stack-1x fa-cus"></i>
+	</span>
+	<span class="fa-stack fa-lg">
+		<i class="fa fa-circle fa-stack-2x fa-cusp"></i>
+		<i class="fa fa-child fa-stack-1x fa-cus"></i>
+	</span>
+	</div>
+	
+	<div id="midop">
+		<a href="./pages/stat.html"><img src="./img/e.png" height="48%" id="midop1" class="zoom"></img></a>
+		<a href="./pages/newbirth.html"><img src="./img/f.png" height="49%" id="midop2" class="zoom"></img></a>
+		<img src="./img/g.png" height="48%" id="midop3" class="zoom" onclick="getcert()"></img>
+		<a href="./pages/newdeath.html"><img src="./img/h.png" height="48%" id="midop4" class="zoom"></img></a>
+		<img src="./img/i.png" height="48%" id="midop5" class="zoom" onclick="earth()"></img>
+	</div>
+	<div id="opcap">
+		<div id="opcap1">
+			Statistics Birth/Death Registration.
+			<br>
+			सांख्यिकी जन्म / मृत्यु पंजीकरण ।
+			<br>
+			सांख्यिकी , जन्म / मृत्यू नोंदणी.
+			<br>
+			ਅੰਕੜੇ ਜਨਮ / ਮੌਤ ਰਜਿਸਟਰੇਸ਼ਨ .
+			<br>
+			గణాంకాలు బర్త్ / డెత్ నమోదు.
+			<br>
+			اعداد و شمار پیدائش / موت رجسٹریشن .
+		</div>
+		<div id="opcap2">
+			Register New Birth Certificate.
+			<br>
+			नए जन्म प्रमाणपत्र रजिस्टर।
+			<br>
+			नवीन जन्म दाखला नोंदणी करा.
+			<br>
+			ਨ੍ਯੂ ਜਨਮ ਸਰਟੀਫਿਕੇਟ ਰਜਿਸਟਰ .
+			<br>
+			న్యూ బర్త్ సర్టిఫికేట్ నమోదు.
+			<br>
+			نئی پیدائش کا سرٹیفکیٹ رجسٹر .
+		</div>
+		<div id="opcap3">
+			Get Birth/Death Certificate.
+			<br>
+			जन्म / मृत्यु प्रमाण पत्र प्राप्त करें।
+			<br>
+			जन्म / मृत्यू दाखला मिळवा.
+			<br>
+			ਜਨਮ / ਮੌਤ ਸਰਟੀਫਿਕੇਟ ਪ੍ਰਾਪਤ ਕਰੋ.
+			<br>
+			బర్త్ / డెత్ సర్టిఫికెట్ పొందండి.
+			<br>
+			پیدائش / موت کا سرٹیفکیٹ حاصل کریں .
+		</div>
+		<div id="opcap4">
+			Register New Death Certificate.
+			<br>
+			नए मृत्यु प्रमाणपत्र रजिस्टर।
+			<br>
+			नवी मृत्यू प्रमाणपत्र नोंदणी.
+			<br>
+			ਨ੍ਯੂ ਮੌਤ ਸਰਟੀਫਿਕੇਟ ਰਜਿਸਟਰ .
+			<br>
+			న్యూ డెత్ సర్టిఫికెట్ నమోదు.
+			<br>
+			نیا سند وفات رجسٹر .
+		</div>
+		<div id="opcap5">
+			Links to all the Municipal Services.
+			<br>
+			सभी नगरपालिका सेवाओं के लिए लिंक ।
+			<br>
+			सर्व महानगरपालिका सेवा दुवे .
+			<br>
+			ਸਾਰੇ ਨਗਰ ਸਰਵਿਸਿਜ਼ ਨੂੰ ਲਿੰਕ.
+			<br>
+			అన్ని మున్సిపల్ సర్వీసెస్ లింకులు.
+			<br>
+			تمام میونسپل سروسز کے لنکس .
+		</div>
+	</div>
+	
+	
+		<img src="./img/c.png" id="side"></img>
+		<img src="./img/d.png" id="under"></img>
+	
+	
+	<div class="ham">
+	<i id="ham" class="fa fa-bars fa-3x" onclick="sideb()"></i>
+	</div>
+	<div id="harse" align="center">
+		Birth/Death Certificate Generation.
+		<br><br>
+		<span class="input input--minoru">
+					<input class="input__field input__field--yoko" type="text" id="input-16" />
+					<label class="input__label input__label--yoko" for="input-16">
+						<span class="input__label-content input__label-content--yoko" onclick="search()" style="cursor:pointer;">SEARCH</span>
+					</label>
+		</span>
+		<div id="icon">
+			<i class="fa fa-search fa-stack-1x" onclick="search()" style="cursor:pointer;"></i>
+		</div>
+	</div>
+	
+	<div class="sideOp" >
+		<div class="Op1 b1 animated fadeIn" id="op1" onclick="report()">
+			<span class="fa-stack fa-lg pull-left">
+			<i class="fa fa-circle fa-stack-2x fa-cus"></i>
+			<i class="fa fa-cogs fa-stack-1x fa-cusp"></i>
+			</span>
+			<p style="color:white;">REPORT/COMPLAINTS</p>
+		</div>
+		
+		<a href="http://www.archive.india.gov.in/citizen/nagarpalika/nagarpalika.php?id=5"><div class="Op2 b1 animated fadeIn" id="op2">
+			<span class="fa-stack fa-lg pull-left">
+			<i class="fa fa-circle fa-stack-2x fa-cus"></i>
+			<i class="fa fa-bullhorn fa-stack-1x fa-cusp"></i>
+			</span>
+			<p style="color:white;">DETAILS OF STATE</p>
+		</div>
+		</a>
+		<div class="Op3 b1 animated fadeIn" id="op3" onclick="language()">
+			<span class="fa-stack fa-lg pull-left">
+			<i class="fa fa-circle fa-stack-2x fa-cus"></i>
+			<i class="fa fa-yelp fa-stack-1x fa-cusp"></i>
+			</span>
+			<p style="color:white;">CHANGE LANGUAGE</p>
+		</div>
+		
+		<div class="Op4 b1 animated fadeIn" id="op4">
+			<span class="fa-stack fa-lg pull-left">
+			<i class="fa fa-circle fa-stack-2x fa-cus"></i>
+			<i class="fa fa-database fa-stack-1x fa-cusp"></i>
+			</span>
+			<p style="color:white;">AUDIO SITE</p>
+		</div>
+		<a href="http://www.archive.india.gov.in/citizen/nagarpalika/nagarpalika.php?id=5">
+		<div class="Op5 b1 animated fadeIn" id="op5">
+			<span class="fa-stack fa-lg pull-left">
+			<i class="fa fa-circle fa-stack-2x fa-cus"></i>
+			<i class="fa fa-cloud-upload fa-stack-1x fa-cusp"></i>
+			</span>
+			<p style="color:white;">OLD WEBSITE</p>
+		</div></a>
+		
+		
+	</div>
+	
+	<div id="ear" class="ear">
+		<i class="fa fa-close fa-stack-1x fa-cusp fa-2x" id="close" onclick="earthrev()"></i>
+		<h2 style="left:10vw;position:absolute;">MUNICIPALITY WISE LIST</h2>
+		<div id="line">
+		</div>
+		<div id="con">
+		<ul>
+			<a href="http://www.gunturcorporation.org/index.asp"><li>Guntur Municipal Corp.</li></a>
+			<a href="http://www.ghmc.gov.in/"><li>Hyderabad Municipal Corp.</li></a>
+			<a href="http://www.ourvmc.org/"><li>Vijayawada Municipal Corp.</li></a>
+			<a href="http://www.gmcportal.in:8080/GMCLicence/index.jsp"><li>Guwahati Municipal Corp.</li></a>
+			<a href="http://www.patnanagarnigam.org/"><li>Patna Municipal Corp.</li></a>
+			<a href="http://www.nagarnigamraipur.com/"><li>Raipur Municipal Corp.</li></a>
+			<a href="http://www.ccpgoa.com/"><li>Panjim Municipal Corp.</li></a>
+			<a href="http://www.egovamc.com/"><li>Ahmedabad Municipal Corp.</li></a>
+			<a href="http://www.bmcgujarat.com/"><li>Bhavnagar Municipal Corp.</li></a>
+			<a href="http://www.mcjamnagar.com/"><li>Jamnagar Municipal Corp.</li></a>
+			<a href="http://www.rmc.gov.in/"><li>Rajkot Municipal Corp.</li></a>
+			<a href="http://www.suratmunicipal.org/"><li>Surat Municipal Corp.</li></a>
+			<a href="http://www.vmcegov.org/"><li>Vadodara Municipal Corp.</li></a>
+			<a href="http://www.mcfbd.org/"><li>Faridabad Municipal Corp.</li></a>
+			<a href="http://shimlamc.gov.in/"><li>Shimla Municipal Corp.</li></a>
+			<a href="http://jmc.nic.in/"><li>Jammu Municipal Corp.</li></a>
+			<a href="http://www.ranchimunicipal.com/"><li>Ranchi Municipal Corp.</li></a>
+			<a href="http://www.bmponline.org/"><li>Bengaluru Municipal Corp.</li></a>
+			<a href="http://www.hdmc.gov.in/"><li>Hubli-Dharwad Municipal Corp.</li></a>
+			<a href="http://www.bmponline.org/"><li>Thiruvananthapuram Municipal Corp.</li></a>
+			<a href="http://www.corporationofcochin.net/"><li>Cochin Municipal Corp.</li></a>
+			<a href="http://www.kozhikodecorporation.org/"><li>Kozhikode Municipal Corp.</li></a>
+			<a href="http://www.bhopalmunicipal.com/"><li>Bhopal Municipal Corp.</li></a>
+			<a href="http://gwaliormunicipalcorporation.org/"><li>Gwalior Municipal Corp.</li></a>
+			<a href="http://www.jmcjabalpur.org/index.jsp"><li>Jabalpur Municipal Corp.</li></a>
+			<a href="http://www.punecorporation.org/pmcwebn/index.aspx"><li>Pune Municipal Corp.</li></a>
+			<a href="http://www.nashikcorporation.gov.in/"><li>Nashik Municipal Corp.</li></a>
+			<a href="http://www.pcmcindia.in/"><li>Pimpri Chinchwad Municipal Corp.</li></a>
+		</ul>
+		</div>
+		<div id="con1">
+		<ul>
+			<a href="http://www.mcgm.gov.in/"><li>Greater Mumbai Municipal Corp.</li></a>
+			<a href="http://www.solapurcorporation.com/"><li>Solapur Municipal Corp.</li></a>
+			<a href="http://www.thanemahapalika.com/"><li>Thane Municipal Corp.</li></a>
+			<a href="http://www.umc.gov.in/"><li>Ulhasnagar Municipal Corp.</li></a>
+			<a href="http://amc.gov.in/"><li>Ahmednagar Municipal Corp.</li></a>
+			<a href="http://manipur.nic.in/"><li>Manipur Municipal Corp.</li></a>
+			<a href="http://smb.gov.in/"><li>Shillong Municipal Corp.</li></a>
+			<a href="http://mizoram.nic.in/"><li>Mizoram Municipal Corp.</li></a>
+			<a href="http://nagaland.nic.in"><li>Nagaland Municipal Corp.</li></a>
+			<a href="http://bmc.gov.in/"><li>Bhubaneswar Municipal Corp.</li></a>
+			<a href="http://www.amritsarcorp.com/index.htm"><li>Amritsar Municipal Corp.</li></a>
+			<a href="http://www.mcjalandhar.in/"><li>Jalandhar Municipal Corp.</li></a>
+			<a href="http://www.jaipurmc.org/"><li>Jaipur Municipal Corp.</li></a>
+			<a href="http://jodhpurmc.org/"><li>Jodhpur Municipal Corp.</li></a>
+			<a href="http://sikkim.gov.in/"><li>Sikkim Municipal Corp.</li></a>
+			<a href="http://www.chennaicorporation.gov.in/"><li>Chennai Municipal Corp.</li></a>
+			<a href="http://www.coimbatore-corporation.com/"><li>Coimbatore Municipal Corp.</li></a>
+			<a href="http://erodecorp.tn.gov.in/"><li>Erode Municipal Corp.</li></a>
+			<a href="http://www.salemcorporation.gov.in/"><li>Salem Municipal Corp.</li></a>
+			<a href="http://municipality.tn.gov.in/Thoothukudi/"><li>Thoothukudi Municipal Corp.</li></a>
+			<a href="http://www.trichycorporation.gov.in/"><li>Tiruchirappalli Municipal Corp.</li></a>
+			<a href="http://tirunelvelicorp.tn.gov.in/"><li>Tirunelveli Municipal Corp.</li></a>
+			<a href="http://tiruppurcorporation.tn.gov.in/"><li>Tiruppur Municipal Corp.</li></a>
+			<a href="http://vellorecorp.tn.gov.in/"><li>Vellore Municipal Corp.</li></a>
+			<a href="http://tripura.nic.in/amc/"><li>Agartala Municipal Corp.</li></a>
+			<a href="http://lmc.up.nic.in/"><li>Lucknow Municipal Corp.</li></a>
+			<a href="https://www.kmcgov.in/KMCPortal/HomeAction.do"><li>Kolkata Municipal Corp.</li></a>
+			<a href="http://asansolmunicipalcorporation.org/"><li>Asansol Chinchwad Municipal Corp.</li></a>
+		</ul>
+		</div>
+	</div>
+	
+
+<script>
+	var a=0;
+	var ham = document.getElementById("ham");
+    var currentClass = ham.className;
+
+function sideb(){
+
+	if(a==0)
+	{
+		TweenMax.to(["#side",".ham"],0.3,{x:250});
+		ham.className = "fa fa-chevron-left fa-3x"; 
+		document.getElementById('op1').style.display= 'block' ;
+		document.getElementById('op2').style.display= 'block' ;
+		document.getElementById('op3').style.display= 'block' ;
+		document.getElementById('op4').style.display= 'block' ;
+		document.getElementById('op5').style.display= 'block' ;
+		document.getElementById('harse').style.display= 'block' ;
+		a=1;
+	}
+	else
+	{
+		TweenMax.to(["#side",".ham"],0.3,{x:0});
+		ham.className = "fa fa-bars fa-3x"; 
+		document.getElementById('op1').style.display= 'none' ;
+		document.getElementById('op2').style.display= 'none' ;
+		document.getElementById('op3').style.display= 'none' ;
+		document.getElementById('op4').style.display= 'none' ;
+		document.getElementById('op5').style.display= 'none' ;
+		document.getElementById('harse').style.display= 'none' ;
+		a=0;
+	}
+}
+
+function earth(){	
+		document.getElementById("ear").className = "animated slideInRight";	
+}
+
+function earthrev(){	
+		document.getElementById("ear").className = "animated slideOutRight";	
+}
+
+function getcert(){
+		swal({  title: "Provide your Receipt Number !",
+				text: "Write something :",   
+				type: "input",   
+				showCancelButton: true,   
+				closeOnConfirm: false,   
+				animation: "slide-from-top",   
+				inputPlaceholder: "Write something" 
+				}, 
+				function(inputValue){   
+					if (inputValue === false) return false;
+					if (inputValue === "") {
+						swal.showInputError("You need to write something!");     return false   }
+					if (inputValue === "19090078000" || inputValue === "35680007845" ) {
+						swal({
+										title: "We Have'nt Recieved Your Ceritificate Yet!",
+										text: "It Will Take Some Time. Your Reciept Number :" + inputValue,
+										type: "warning",
+										showCancelButton: true,
+										confirmButtonColor: "#DD6B55",
+										confirmButtonText: "Okay",
+										closeOnConfirm: false },
+										function(){
+											swal({
+													title:"REPORT",
+													text:"You can report if it has crossed the time limit! To report open the side menu.",
+													imageUrl: "./img/a.png"
+												});
+									});  }
+					else{
+						
+						sweetAlert("Receipt Number Not Found...", "Something went wrong! Try filling the birth/death certificate form first.", "error");
+					
+					}		
+								
+			});
+
+}
+
+function report(){
+		
+		swal({   title: "Write Your Complaint.",   text: "Please mention your receipt number if any.",   type: "input",   showCancelButton: true,   closeOnConfirm: false,   animation: "slide-from-top",   inputPlaceholder: "Write something" }, function(inputValue){   if (inputValue === false) return false;      if (inputValue === "") {     swal.showInputError("You need to write something!");     return false   }      swal("Nice!", "We got your report. We will try to solve it as soon as possible.", "success"); });
+
+
+}
+
+function language(){
+swal("Available Languages!", "Hindi, English, Telugu, Urdu, Punjabi and Maratthi.")
+}
+
+function search(){
+		var c=document.getElementById('input-16').value;
+		c="http://www.archive.india.gov.in/npi_search.php?q=" + c;
+		window.location.href = c;
+}
+</script>
+</body>
+</html>
